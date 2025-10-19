@@ -9,7 +9,7 @@ export const Home = () => {
 	const {store, dispatch} =useGlobalReducer()
 	
 	useEffect(() => {
-		fetch()
+		fetch("https://playground.4geeks.com/contact/agendas/JCM96/contacts")
 			
 			.then(response => {
 				if (!response.ok) {
@@ -31,7 +31,7 @@ export const Home = () => {
 		{store.contacts.map((contact) => (
 			<ContactoCard 
                     key={contact.id} // Es mejor usar el 'id' del contacto que el 'index'
-                    {...item}
+                    {...contact}
 					/>
 			// <ContactoCard key={index} {...contact}/>
 		))}
