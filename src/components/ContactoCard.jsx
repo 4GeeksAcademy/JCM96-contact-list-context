@@ -15,7 +15,7 @@ const ContactoCard = ({ nombre, direccion, telefono, email }) => {
                         <button className="btn btn-danger m-1" aria-label="Eliminar"><FontAwesomeIcon icon={faTrash} /></button>
                     </div>
                     <div className="text-start">
-                        <h2 className="mb-3">Jhon{nombre}</h2>
+                        <h2 className="mb-3">{nombre}</h2>
                         <p className="text-muted mb-2"><FontAwesomeIcon icon={faHouse} className="me-3" />{direccion || "123 Fake St, Anytown, USA"}</p>
                         <p className="text-muted mb-2"><FontAwesomeIcon icon={faMobile} className="me-3" />{telefono || "(800) 555-1234"}</p>
                         <p className="text-muted mb-2"><FontAwesomeIcon icon={faEnvelope} className="me-3" />{email || "jhon@example.com"}</p>
