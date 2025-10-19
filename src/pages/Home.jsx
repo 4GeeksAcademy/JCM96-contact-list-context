@@ -9,7 +9,7 @@ export const Home = () => {
 	const {store, dispatch} =useGlobalReducer()
 	
 	useEffect(() => {
-		fetch("https://playground.4geeks.com/contact/agendas/JCM96/contacts")
+		fetch()
 			
 			.then(response => {
 				if (!response.ok) {
@@ -24,12 +24,17 @@ export const Home = () => {
 				});
 			})
 	}, []);
-
+// ¡Agrega esta línea!
+    console.log("Contactos en el store:", store.contacts);
 	return (
 		<div className="text-center mt-5">
-		<ContactoCard {...store.contacts[0]}/>
-		<ContactoCard {...store.contacts[1]}/>
-		<ContactoCard {...store.contacts[2]}/>
+		{store.contacts.map((contact) => (
+			<ContactoCard 
+                    key={contact.id} // Es mejor usar el 'id' del contacto que el 'index'
+                    {...item}
+					/>
+			// <ContactoCard key={index} {...contact}/>
+		))}
 		</div>
 	);
 }; 
