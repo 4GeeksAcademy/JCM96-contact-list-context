@@ -12,7 +12,10 @@ export const initialStore=()=>{
         title: "Do my homework",
         background: null,
       }
-    ]
+    ],
+    usuario: "JCM96",
+    contacto: [],
+    favoritos: [],
   }
 }
 

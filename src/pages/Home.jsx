@@ -1,5 +1,5 @@
-import rigoImageUrl from "../assets/img/rigo-baby.jpg";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
+import ContactoCard from "../components/ContactoCard.jsx";
 
 export const Home = () => {
 
@@ -7,10 +7,10 @@ export const Home = () => {
 
 	return (
 		<div className="text-center mt-5">
-			<h1>Hello Rigo!!</h1>
-			<p>
-				<img src={rigoImageUrl} />
-			</p>
+		<ContactoCard/>
 		</div>
 	);
 }; 
+
+// He importado el componente ContactoCard en el archivo Home.jsx para poder reutilizarlo
+//  y mostrar la tarjeta de contacto en la página principal de la aplicación.
