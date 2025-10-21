@@ -9,7 +9,7 @@ export const Home = () => {
 	const {store, dispatch} =useGlobalReducer()
 	
 	useEffect(() => {
-		fetch("https://playground.4geeks.com/contact/agendas/JCM96/contacts")
+		fetch(`https://playground.4geeks.com/contact/agendas/${store.agenda_slug}/contacts`)
 			
 			.then(response => {
 				if (!response.ok) {

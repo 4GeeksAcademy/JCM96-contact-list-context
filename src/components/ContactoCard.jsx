@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faMobile, faEnvelope, faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const ContactoCard = ({ nombre, direccion, telefono, email }) => {
+const ContactoCard = ({ name, address, phone, email }) => {
     return (
         <div className="container border py-3 my-3 rounded-3 shadow-lg">
             <div className="row w-100 align-items-center">
@@ -15,10 +15,10 @@ const ContactoCard = ({ nombre, direccion, telefono, email }) => {
                         <button className="btn btn-danger m-1" aria-label="Eliminar"><FontAwesomeIcon icon={faTrash} /></button>
                     </div>
                     <div className="text-start">
-                        <h2 className="mb-3">{nombre}</h2>
-                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faHouse} className="me-3" />{direccion || "123 Fake St, Anytown, USA"}</p>
-                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faMobile} className="me-3" />{telefono || "(800) 555-1234"}</p>
-                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faEnvelope} className="me-3" />{email || "jhon@example.com"}</p>
+                        <h2 className="mb-3">{name}</h2>
+                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faHouse} className="me-3" />{address || "Sin dirección"}</p>
+                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faMobile} className="me-3" />{phone || "Sin teléfono"}</p>
+                        <p className="text-muted mb-2"><FontAwesomeIcon icon={faEnvelope} className="me-3" />{email || "Sin email"}</p>
                     </div>
                 </div>
             </div>

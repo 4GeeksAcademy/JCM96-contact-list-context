@@ -1,20 +1,10 @@
 export const initialStore=()=>{
   return{
-    contacts: [
-      {
-        id: 1,
-        nombre: "JCM96",
-        telefono: "123456789",
-        email: "asd@gmail.com",
-      },
-      {
-        id: 2,
-        nombre: "Nacho",
-        telefono: "123451234",
-        email: "Nacho@gmail.com",
-      }
-    ],
-    // contacto: [],
+    // El nombre único para tu agenda en la API.
+    // ¡Puedes cambiar "JCM96" por el que prefieras!
+    agenda_slug: "JCM96",
+    // Los contactos se cargarán desde la API.
+    contacts: [],
   }
 }
 

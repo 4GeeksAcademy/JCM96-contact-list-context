@@ -24,7 +24,7 @@ export const NewContact = () => {
         e.preventDefault();
 
         // 3.2. Aquí está el 'fetch' para ENVIAR (POST) datos
-        fetch("https://playground.4geeks.com/contact/agendas/JCM96/contacts", {
+        fetch(`https://playground.4geeks.com/contact/agendas/${store.agenda_slug}/contacts`, {
             method: "POST", // Le decimos que queremos CREAR
             headers: {
                 "Content-Type": "application/json" // Le decimos que enviaremos JSON
