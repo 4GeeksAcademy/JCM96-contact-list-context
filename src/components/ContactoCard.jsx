@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faMobile, faEnvelope, faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const ContactoCard = ({ name, address, phone, email }) => {
+const ContactoCard = ({ id, name, address, phone, email, onDelete }) => {
     return (
         <div className="container border py-3 my-3 rounded-3 shadow-lg">
             <div className="row w-100 align-items-center">
@@ -11,8 +12,10 @@ const ContactoCard = ({ name, address, phone, email }) => {
                 </div>
                 <div className="col-sm-9">
                     <div className="d-flex justify-content-end mb-2">
-                        <button className="btn btn-primary m-1" aria-label="Editar"><FontAwesomeIcon icon={faPencil} /></button>
-                        <button className="btn btn-danger m-1" aria-label="Eliminar"><FontAwesomeIcon icon={faTrash} /></button>
+                        <Link to={`/edit/${id}`} className="btn btn-primary m-1" aria-label="Editar">
+                            <FontAwesomeIcon icon={faPencil} />
+                        </Link>
+                        <button onClick={() => onDelete(id)} className="btn btn-danger m-1" aria-label="Eliminar"><FontAwesomeIcon icon={faTrash} /></button>
                     </div>
                     <div className="text-start">
                         <h2 className="mb-3">{name}</h2>
