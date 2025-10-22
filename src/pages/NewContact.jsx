@@ -71,13 +71,13 @@ export const NewContact = () => {
                            onChange={(e) => setFormData({...formData, email: e.target.value})}
                     />
 
-                    <label htmlFor="telefono" className="form-label">Teléfono</label>
+                    <label htmlFor="telefono" className="form-label fw-bold">Teléfono</label>
                     <input type="text" className="form-control" placeholder="Teléfono" 
                            value={formData.phone}
                            onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     />
 
-                    <label htmlFor="dirección" className="form-label">Dirección</label>
+                    <label htmlFor="dirección" className="form-label fw-bold">Dirección</label>
                     <input type="text" className="form-control" placeholder="Dirección" 
                            value={formData.address}
                            onChange={(e) => setFormData({...formData, address: e.target.value})}
