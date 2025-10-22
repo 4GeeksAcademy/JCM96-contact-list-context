@@ -16,7 +16,7 @@ export const Layout = () => {
         // Primero, intentamos obtener la agenda.
         fetch(`https://playground.4geeks.com/contact/agendas/${store.agenda_slug}`)
         .then(response => {
-            // Si la respuesta es 404, la agenda no existe, entonces la creamos.
+            // Si la respuesta es 404, la agenda no existe, entonces se crea.
             if (response.status === 404) {
                 console.log(`Agenda '${store.agenda_slug}' no encontrada. Creando...`);
                 return fetch(`https://playground.4geeks.com/contact/agendas/${store.agenda_slug}`, { 
@@ -27,7 +27,7 @@ export const Layout = () => {
         })
         .then(response => console.log(`Estado de la agenda '${store.agenda_slug}':`, response.status))
         .catch(error => console.error("Error al verificar/crear la agenda:", error));
-    }, [store.agenda_slug]); // Se ejecuta si el slug de la agenda cambia.
+    }, [store.agenda_slug]); // Se ejecuta si el slug agenda cambia.
 
     return (
         <>

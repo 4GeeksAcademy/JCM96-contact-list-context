@@ -50,7 +50,7 @@ export const Home = () => {
 		<div className="text-center mt-5">
 		{store.contacts.map((contact) => (
 			<ContactoCard 
-                    key={contact.id} // Es mejor usar el 'id' del contacto que el 'index'
+                    key={contact.id} //  mejor usar el 'id'
                     {...contact}
 					onDelete={handleDelete} />
 		))}

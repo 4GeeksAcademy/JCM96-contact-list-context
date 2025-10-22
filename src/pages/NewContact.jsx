@@ -58,7 +58,7 @@ export const NewContact = () => {
                 {/* 4. Conectamos la función al 'onSubmit' del formulario */}
                 <form className="d-flex row gap-3 px-5 text-start" onSubmit={handleSubmit}>
 
-                    {/* 5. IMPORTANTE: Asegúrate de que el 'value' y el 'onChange' coincidan con el estado */}
+                    {/* 5. IMPORTANTE Asegúrate de que el 'value' y el 'onChange' coincidan con el estado */}
                     <label htmlFor="nombre" className="form-label fw-bold">Nombre</label>
                     <input type="text" className="form-control" placeholder="Full Name" 
                            value={formData.name} 

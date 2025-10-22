@@ -62,8 +62,6 @@ export const EditContact = () => {
             })
             .then(data => {
                 console.log("Contacto actualizado:", data);
-                // Opcional: podrías despachar una acción para actualizar el contacto en el store local
-                // o simplemente recargar los contactos en la página principal.
                 navigate('/'); // Navega de vuelta a la lista de contactos
             })
             .catch(error => console.error("Error al actualizar el contacto:", error));
